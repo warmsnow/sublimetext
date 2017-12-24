@@ -1,0 +1,8 @@
+<snippet>
+   <name>UVM Component</name>
+   <content><![CDATA[
+
+    ]]></content>
+    <tabTrigger>uvmcomponent</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>
