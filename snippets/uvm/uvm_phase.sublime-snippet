@@ -1,0 +1,13 @@
+<snippet>
+   <name>UVM Phase</name>
+   <content><![CDATA[
+//------------------------------------------------------------------------------
+// ${1}
+//------------------------------------------------------------------------------
+function void ${0:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::${1}(uvm_phase phase);
+    super.${1}(phase);
+endfunction : ${1}
+    ]]></content>
+    <tabTrigger>uvmphase</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>
