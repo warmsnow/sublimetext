@@ -1,0 +1,13 @@
+<snippet>
+   <name>Task</name>
+   <content><![CDATA[
+//------------------------------------------------------------------------------
+// ${1}
+//------------------------------------------------------------------------------
+    task ${0:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::${1}();
+        ${2}
+    endtask : ${1}
+  ]]></content>
+    <tabTrigger>task</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>
