@@ -1,0 +1,12 @@
+<snippet>
+   <description>SystemVerilog Task Doxygen</description>
+   <content><![CDATA[
+/*******************************************************************************
+* ${2}
+*******************************************************************************/
+    task ${TM_FILENAME/(.+)\..+|.*/$1/:name}::${2}();
+        ${3}
+    endtask : ${2}]]></content>
+    <tabTrigger>sv_task</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

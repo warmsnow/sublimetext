@@ -1,0 +1,9 @@
+<snippet>
+   <description>Extern Virtual Function</description>
+   <content><![CDATA[
+extern virtual function void ${1}();
+]]>
+    </content>
+    <tabTrigger>extern_function</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

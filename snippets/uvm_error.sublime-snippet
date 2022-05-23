@@ -1,0 +1,8 @@
+<snippet>
+    <description>UVM Error</description>
+  <content><![CDATA[
+`uvm_error(get_type_name(), \$sformatf("${0}"))]]>
+  </content>
+    <tabTrigger>error</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

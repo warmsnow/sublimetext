@@ -1,0 +1,15 @@
+<snippet>
+    <description>Run Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Run Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::run_phase(uvm_phase phase);
+        super.run_phase(phase);
+        ${2}
+    endtask : run_phase
+]]>
+  </content>
+    <tabTrigger>phase_run</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

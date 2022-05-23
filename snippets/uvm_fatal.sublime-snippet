@@ -1,0 +1,8 @@
+<snippet>
+    <description>UVM Fatal</description>
+  <content><![CDATA[
+`uvm_fatal(get_type_name(), \$sformatf("${0}"))]]>
+  </content>
+    <tabTrigger>fatal</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

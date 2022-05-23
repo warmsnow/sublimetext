@@ -1,0 +1,12 @@
+<snippet>
+   <description>SystemVerilog Derived Class</description>
+   <content><![CDATA[class ${TM_FILENAME/(.+)\..+|.*/$1/:name} extends ${2:/*base class*/};
+
+    function new(string name = "${TM_FILENAME/(.+)\..+|.*/$1/:name}");
+        ${3}
+    endfunction : new
+
+endclass : ${TM_FILENAME/(.+)\..+|.*/$1/:name}]]></content>
+    <tabTrigger>sv_class</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+    <description>Pre-Shutdown Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Pre-shutdown Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::pre_shutdown_phase(uvm_phase phase);
+        super.pre_shutdown_phase(phase);
+        ${2}
+    endtask : pre_shutdown_phase
+]]>
+  </content>
+    <tabTrigger>rphase_pre_shutdown</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

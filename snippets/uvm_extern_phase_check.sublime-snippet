@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Check Phase</description>
+  <content><![CDATA[
+extern virtual function void check_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_check</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

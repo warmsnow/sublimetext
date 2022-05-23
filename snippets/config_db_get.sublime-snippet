@@ -1,0 +1,8 @@
+<snippet>
+    <description>Get ConfigDB </description>
+  <content><![CDATA[
+uvm_config_db#(${1:ClassName})::get(${2:Context}, "${3:InstName}", "${1:ClassName}", ${4:FieldName});
+]]></content>
+    <tabTrigger>config_db</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+   <description>SystemVerilog Unnamed Class</description>
+   <content><![CDATA[class ${1:name};
+    ${2}
+endclass : ${1}]]></content>
+    <tabTrigger>sv_class</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

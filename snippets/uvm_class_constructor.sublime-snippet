@@ -1,0 +1,14 @@
+<snippet>
+   <description>Class Constructor</description>
+   <content><![CDATA[
+/*******************************************************************************
+* Constructor
+*******************************************************************************/
+    function ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::new (string name="${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}", uvm_component parent);
+        super.new(name, parent);
+    endfunction : new
+]]>
+    </content>
+    <tabTrigger>new</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

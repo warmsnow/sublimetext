@@ -1,0 +1,9 @@
+<snippet>
+   <description>Extern Virtual Task</description>
+   <content><![CDATA[
+extern virtual task ${1}();
+]]>
+    </content>
+    <tabTrigger>extern_task</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

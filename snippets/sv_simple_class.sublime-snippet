@@ -1,0 +1,12 @@
+<snippet>
+   <description>SystemVerilog Simple Class</description>
+   <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}};
+
+    function new(string name = "${TM_FILENAME/(.+)\..+|.*/$1/:name}");
+        ${2}
+    endfunction : new
+
+endclass : ${1}]]></content>
+    <tabTrigger>sv_class</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

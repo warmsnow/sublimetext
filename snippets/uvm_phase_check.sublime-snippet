@@ -1,0 +1,15 @@
+<snippet>
+    <description>Check Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Check Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::check_phase(uvm_phase phase);
+        super.check_phase(phase);
+        ${2}
+    endfunction : check_phase
+]]>
+  </content>
+    <tabTrigger>phase_check</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

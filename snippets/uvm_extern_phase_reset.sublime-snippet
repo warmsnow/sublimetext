@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Reset Phase</description>
+  <content><![CDATA[
+extern virtual task reset_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_reset</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

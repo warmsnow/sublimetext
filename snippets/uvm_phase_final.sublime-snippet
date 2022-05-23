@@ -1,0 +1,15 @@
+<snippet>
+    <description>Final Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Final Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::final_phase(uvm_phase phase);
+        super.final_phase(phase);
+        ${2}
+    endfunction : final_phase
+]]>
+  </content>
+    <tabTrigger>phase_final</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

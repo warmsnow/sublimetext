@@ -1,0 +1,10 @@
+<snippet>
+  <description>Guard</description>
+   <content><![CDATA[
+`ifndef ${1:${TM_FILENAME/(.+)\..+|.*/\U$1/:name}}_SV
+`define ${1:${TM_FILENAME/(.+)\..+|.*/\U$1/:name}}_SV
+
+`endif // ${1:${TM_FILENAME/(.+)\..+|.*/\U$1/:name}}_SV]]></content>
+    <tabTrigger>guard</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

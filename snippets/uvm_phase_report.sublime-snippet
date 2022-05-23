@@ -1,0 +1,15 @@
+<snippet>
+    <description>Report Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Report Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::report_phase(uvm_phase phase);
+        super.report_phase(phase);
+        ${2}
+    endfunction : report_phase
+]]>
+  </content>
+    <tabTrigger>phase_report</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

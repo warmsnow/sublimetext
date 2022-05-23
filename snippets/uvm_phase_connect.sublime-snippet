@@ -1,0 +1,15 @@
+<snippet>
+    <description>Connect Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Connect Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::connect_phase(uvm_phase phase);
+        super.connect_phase(phase);
+        ${2}
+    endfunction : connect_phase
+]]>
+  </content>
+    <tabTrigger>phase_connect</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

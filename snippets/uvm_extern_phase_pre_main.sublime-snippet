@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Pre-Main Phase</description>
+  <content><![CDATA[
+extern virtual task pre_main_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_pre_main</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

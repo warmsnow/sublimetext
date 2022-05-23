@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Report Phase</description>
+  <content><![CDATA[
+extern virtual function void report_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_report</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

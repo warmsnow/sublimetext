@@ -1,0 +1,15 @@
+<snippet>
+    <description>Post-Configure Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Post-Configure Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::post_configure_phase(uvm_phase phase);
+        super.post_configure_phase(phase);
+        ${2}
+    endtask : post_configure_phase
+]]>
+  </content>
+    <tabTrigger>rphase_post_configure</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

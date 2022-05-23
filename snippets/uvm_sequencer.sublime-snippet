@@ -1,0 +1,24 @@
+<snippet>
+    <description>UVM Sequencer</description>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} #(type SEQ_ITEM = ${2:/*seq item*/}) extends uvm_sequencer #(SEQ_ITEM);
+
+    typedef ${TM_FILENAME/(.+)\..+|.*/$1/:name} #(${2:/*parameters*/}) this_type_t;
+
+    `uvm_component_param_utils_begin(this_type_t)
+    `uvm_component_utils_end
+
+    // External Class Methods
+    extern function new(string name="${1}", uvm_component parent);
+
+endclass : ${TM_FILENAME/(.+)\..+|.*/$1/:name}
+
+//------------------------------------------------------------------------------
+// Constructor
+//------------------------------------------------------------------------------
+    function ${1}::new(string name="${1}", uvm_component parent);
+        super.new(name, parent);
+    endfunction : new
+]]></content>
+  <tabTrigger>uvm_sequencer</tabTrigger>
+  <scope>source.systemverilog</scope>
+</snippet>

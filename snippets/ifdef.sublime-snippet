@@ -1,0 +1,12 @@
+<snippet>
+	<description>`ifdef … `else … `endif</description>
+    <content><![CDATA[
+`ifdef ${1:symbol}
+
+`else
+
+`endif
+]]></content>
+    <tabTrigger>ifdef</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

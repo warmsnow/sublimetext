@@ -1,0 +1,12 @@
+<snippet>
+	<description>If Condition</description>
+    <content><![CDATA[
+  if(${1:/* condition */}) begin
+	  ${0}
+  end
+  else begin
+    ${2}
+  end]]></content>
+    <tabTrigger>if</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

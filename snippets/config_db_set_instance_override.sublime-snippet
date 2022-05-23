@@ -1,0 +1,8 @@
+<snippet>
+    <description>Set Instance Override </description>
+  <content><![CDATA[
+${1:ParentClassName}::type_id::set_inst_override(${2:DerivedClassName}::get_type(), "${3:InstancePath}", ${4:ParentComponent});
+]]></content>
+    <tabTrigger>config_db</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

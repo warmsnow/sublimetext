@@ -1,0 +1,9 @@
+<snippet>
+    <description>Shutdown Phase</description>
+  <content><![CDATA[
+extern virtual task shutdown_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_shutdown</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

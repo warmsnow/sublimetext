@@ -1,0 +1,26 @@
+<snippet>
+   <description>UVM Class Object Params</description>
+   <content><![CDATA[class ${TM_FILENAME/(.+)\..+|.*/$1/:name} #(${2:/*parameters*/}) extends ${3:/*base class*/};
+
+    typedef ${TM_FILENAME/(.+)\..+|.*/$1/:name} #(${2:/*parameters*/}) this_type_t;
+
+    `uvm_object_param_utils_begin(this_type_t)
+    `uvm_object_utils_end
+
+    // Class members
+    ${4}
+
+    // External Class Methods
+    extern function new(string name = "${TM_FILENAME/(.+)\..+|.*/$1/:name}");
+
+endclass : ${TM_FILENAME/(.+)\..+|.*/$1/:name}
+
+/*******************************************************************************
+* Constructor
+*******************************************************************************/
+    function ${TM_FILENAME/(.+)\..+|.*/$1/:name}::new (string name="${TM_FILENAME/(.+)\..+|.*/$1/:name}");
+        super.new(name);
+    endfunction : new]]></content>
+    <tabTrigger>uvm_class</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

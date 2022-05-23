@@ -1,0 +1,12 @@
+<snippet>
+   <description>SystemVerilog Parameterized Class</description>
+   <content><![CDATA[class ${0:${TM_FILENAME/(.+)\..+|.*/$1/:name}} #(${1:/*parameters*/});
+
+    function new(string name = "${TM_FILENAME/(.+)\..+|.*/$1/:name}");
+        ${2}
+    endfunction : new
+
+endclass : ${0}]]></content>
+    <tabTrigger>sv_class</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

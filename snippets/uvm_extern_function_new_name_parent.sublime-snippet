@@ -1,0 +1,9 @@
+<snippet>
+   <description>Extern Function new(name, parent)</description>
+   <content><![CDATA[
+extern function new(string name="${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}", uvm_component parent);
+]]>
+    </content>
+    <tabTrigger>extern_function_new_name_parent</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

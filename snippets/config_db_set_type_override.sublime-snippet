@@ -1,0 +1,9 @@
+<snippet>
+    <description>Set Type Override </description>
+  <content><![CDATA[
+${1:ParentClassName}::type_id::set_type_override(${2:DerivedClassName}::get_type());
+]]>
+  </content>
+    <tabTrigger>config_db</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

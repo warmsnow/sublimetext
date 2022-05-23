@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Build Phase</description>
+  <content><![CDATA[
+extern virtual function void build_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_build</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+    <description>Build Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Build Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::build_phase(uvm_phase phase);
+        super.build_phase(phase);
+        ${2}
+    endfunction : build_phase
+]]>
+  </content>
+    <tabTrigger>phase_build</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

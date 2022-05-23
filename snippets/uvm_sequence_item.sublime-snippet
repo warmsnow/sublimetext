@@ -1,0 +1,82 @@
+<snippet>
+    <description>UVM sequence item</description>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends uvm_sequence_item;
+
+    // Item Fields
+    // rand logic [3:0] .. ;
+    ${2}
+
+    // Constraints
+
+    `uvm_object_utils_begin(${1})
+        // `uvm_field_* macro invocations here
+    `uvm_object_utils_end
+
+    // External Class Methods
+    extern function new(string name = "${1}");
+    extern function void do_copy(uvm_object rhs);
+    extern function bit do_compare(uvm_object rhs, uvm_comparer comparer);
+    extern function string convert2string();
+
+endclass : ${1}
+
+//------------------------------------------------------------------------------
+// Constructor
+//------------------------------------------------------------------------------
+    function ${1}::new(string name = "${1}");
+        super.new(name);
+    endfunction : new
+
+//------------------------------------------------------------------------------
+// do_copy
+//------------------------------------------------------------------------------
+    virtual function void ${1}::do_copy(uvm_object rhs = null);
+        ${1}    tr;
+
+        if (!$cast(tr, rhs)) begin
+            `uvm_fatal(get_type_name(), $sformatf("rhs is not a ${1}"))
+            return;
+        end
+
+        super.do_copy(rhs);
+
+        // TODO: Implement do_copy method
+        // this.<item field> = tr.<item field>;
+
+    endfunction : do_copy
+
+//------------------------------------------------------------------------------
+// do_compare
+//------------------------------------------------------------------------------
+    virtual function bit ${1}::do_compare(uvm_object rhs, uvm_comparer comparer);
+        ${1}    tr;
+
+        if (!$cast(tr, rhs)) return 0;
+
+        // TODO: implement item fields comparison
+        /*
+        return (super.do_compare(rhs, comparer) &&
+            this.<item field> == <item field>   &&
+            ...
+
+        );
+        */
+
+    endfunction : do_compare
+
+//------------------------------------------------------------------------------
+// convert2string
+//------------------------------------------------------------------------------
+    virtual function string ${1}::convert2string();
+        string s;
+
+        $sformat(s, "%s\n", super.convert2string());
+
+        // TODO: implement convert2string method
+        // ...
+
+    endfunction : convert2string
+]]></content>
+  <tabTrigger>uvm_sequence_item</tabTrigger>
+  <scope>source.systemverilog</scope>
+</snippet>

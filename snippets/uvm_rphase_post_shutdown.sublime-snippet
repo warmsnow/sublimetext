@@ -1,0 +1,15 @@
+<snippet>
+    <description>Post-Shutdown Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Post-Shutdown Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::post_shutdown_phase(uvm_phase phase);
+        super.post_shutdown_phase(phase);
+        ${2}
+    endtask : post_shutdown_phase
+]]>
+  </content>
+    <tabTrigger>rphase_post_shutdown</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

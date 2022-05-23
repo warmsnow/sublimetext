@@ -1,0 +1,8 @@
+<snippet>
+    <description>UVM Warning</description>
+  <content><![CDATA[
+`uvm_warning(get_type_name(), \$sformatf("${0}"))]]>
+  </content>
+    <tabTrigger>warning</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+   <name>Function</name>
+   <content><![CDATA[
+  //----------------------------------------------------------------------------
+  //  FUNCTION    : ${0}
+  //  DESCRIPTION :
+  //  USAGE       :
+  //----------------------------------------------------------------------------
+  function ${0};
+    
+  endfunction : ${0}
+
+  ]]></content>
+    <tabTrigger>function_full</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

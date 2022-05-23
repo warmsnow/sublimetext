@@ -1,0 +1,9 @@
+<snippet>
+   <description>Extern Function new(name)</description>
+   <content><![CDATA[
+extern function new(string name="${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}");
+]]>
+    </content>
+    <tabTrigger>extern_function_new_name</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

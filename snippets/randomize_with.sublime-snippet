@@ -1,0 +1,10 @@
+<snippet>
+    <description>Randomize with constraints</description>
+  <content><![CDATA[
+${1}.randomize() with {
+    ${2}
+};
+]]></content>
+    <tabTrigger>random</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

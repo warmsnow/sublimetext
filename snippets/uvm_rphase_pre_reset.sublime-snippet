@@ -1,0 +1,15 @@
+<snippet>
+    <description>Pre-Reset Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Pre-Reset Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::pre_reset_phase(uvm_phase phase);
+        super.pre_reset_phase(phase);
+        ${2}
+    endtask : pre_reset_phase
+]]>
+  </content>
+    <tabTrigger>rphase_pre_reset</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+   <name>Always FF Async</name>
+   <content><![CDATA[
+  //----------------------------------------------------------------------------
+  //  PROCESS     : proc_${0}
+  //  DESCRIPTION : 
+  //  PARAMETERS  : 
+  //----------------------------------------------------------------------------
+  always @(posedge i_clk or negedge i_rstn) begin : proc_${0}
+    if(!i_rstn) begin
+
+    end 
+    else begin
+
+    end
+  end // End of proc_${0}]]></content>
+    <tabTrigger>always_async_res</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

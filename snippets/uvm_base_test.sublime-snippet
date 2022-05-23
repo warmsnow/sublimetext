@@ -1,0 +1,152 @@
+<snippet>
+    <description>UVM Base Test</description>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends uvm_test;
+    `uvm_component_utils_begin(${1})
+    `uvm_component_utils_end
+
+    // Environment config instance
+    // Example:
+    //env_cfg                 env_cfg_h;
+    ${2}
+
+    // Environment instance
+    // Example:
+    //env                     env_h;
+
+    // Reg model instance
+    // Example:
+    //reg_model               rm_h;
+
+    uvm_table_printer       printer;
+    report_print            color_print;
+    int                     test_timeout;
+
+    // External Class Methods
+    extern function new(string name="${1}", uvm_component parent);
+    extern virtual function void build_phase(uvm_phase phase);
+    extern virtual function void connect_phase(uvm_phase phase);
+    extern virtual function void end_of_elaboration_phase(uvm_phase phase);
+    extern virtual function void extract_phase(uvm_phase phase);
+    extern virtual function void report_phase(uvm_phase phase);
+    extern virtual task reset_phase(uvm_phase phase);
+    extern virtual task main_phase(uvm_phase phase);
+    extern virtual task reset_dut();
+
+endclass : ${1}
+
+/*******************************************************************************
+* Constructor
+*******************************************************************************/
+    function ${1}::new(string name = "${1}", uvm_component parent);
+        super.new(name, parent);
+    endfunction : new
+
+/*******************************************************************************
+* Build Phase
+*******************************************************************************/
+    function void ${1}::build_phase(uvm_phase phase);
+        super.build_phase(phase);
+        printer = new();
+        color_print = new();
+        printer.knobs.depth = 5;
+        test_timeout = 500000 * 1ns;
+        uvm_top.set_timeout(test_timeout);
+
+        // Create TB components
+        // 1. Environment
+        // 2. Environment config
+        // 3. Register model
+
+        //env_h       = env::type_id::create("env_h", this);
+        //env_cfg_h   = env_cfg::type_id::create("env_cfg_h", this);
+        //rm_h        = reg_model::type_id::create("rm_h", this);
+
+        // Build, lock and reset register model
+        //rm_h.build();
+        //rm_h.lock_model();
+        //rm_h.reset();
+
+        // Set register model
+        //uvm_config_db#(reg_model})::set(this, "env_h.*", "rm_h", reg_model);
+
+
+    endfunction : build_phase
+
+/*******************************************************************************
+* Connect Phase
+*******************************************************************************/
+    function void ${1}::connect_phase(uvm_phase phase);
+        super.connect_phase(phase);
+
+    endfunction : connect_phase
+
+/*******************************************************************************
+* End of Elaboration Phase
+*******************************************************************************/
+    function void ${1}::end_of_elaboration_phase(uvm_phase phase);
+        super.end_of_elaboration_phase(phase);
+        `uvm_info(get_type_name(),$sformatf("Printing the test topology :\n%s", this.sprint(printer)), UVM_LOW)
+    endfunction : end_of_elaboration_phase
+
+/*******************************************************************************
+* Reset Phase
+*******************************************************************************/
+    task ${1}::reset_phase(uvm_phase phase);
+        super.reset_phase(phase);
+        phase.raise_objection(this, "Resetting the DUT...");
+        reset_dut();
+        phase.drop_objection(this);
+    endtask : reset_phase
+
+/*******************************************************************************
+* Main Phase
+*******************************************************************************/
+    task ${1}::main_phase(uvm_phase phase);
+        super.main_phase(phase);
+        phase.phase_done.set_drain_time(this, 4000); // 4us drain time
+
+        phase.raise_objection(this, "Starting main phase...");
+
+        // TODO : implement main phase
+
+        phase.drop_objection(this);
+
+    endtask : main_phase
+
+/*******************************************************************************
+* Extract Phase
+*******************************************************************************/
+    function void ${1}::extract_phase(uvm_phase phase);
+        super.extract_phase(phase);
+    endfunction : extract_phase
+
+/*******************************************************************************
+* Report Phase
+*******************************************************************************/
+    function void ${1}::report_phase(uvm_phase phase);
+        uvm_report_handler r_h;
+        uvm_report_server r_s;
+        string report = "";
+
+        super.report_phase(phase);
+        r_h = get_report_handler();
+        r_s = r_h.get_server();
+
+        $sformat(report,"%s\n-----------------------------",report);
+        if(r_s.get_severity_count(UVM_ERROR) == 0 && r_s.get_severity_count(UVM_FATAL) == 0) begin
+            $sformat(report,"%s\nTestcase PASSED!!!",report);
+        end
+        else begin
+            $sformat(report,"%s\nTestcase FAILED!!!",report);
+        end
+    endfunction : report_phase
+
+/*******************************************************************************
+* Reset DUT
+*******************************************************************************/
+    task ${1}::reset_dut();
+        `uvm_error(get_type_name(), $sformatf("[FIXME] : reset_dut method is not implemented"))
+    endtask : reset_dut]]></content>
+    <tabTrigger>test</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

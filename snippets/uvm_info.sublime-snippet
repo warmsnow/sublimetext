@@ -1,0 +1,8 @@
+<snippet>
+    <description>UVM Info</description>
+  <content><![CDATA[
+`uvm_info(get_type_name(), \$sformatf("${0}"), UVM_MEDIUM)]]>
+  </content>
+    <tabTrigger>info</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+    <description>Configure Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Configure Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::configure_phase(uvm_phase phase);
+        super.configure_phase(phase);
+        ${2}
+    endtask : configure_phase
+]]>
+  </content>
+    <tabTrigger>rphase_configure</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

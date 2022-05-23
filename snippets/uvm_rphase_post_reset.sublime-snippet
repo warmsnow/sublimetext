@@ -1,0 +1,15 @@
+<snippet>
+    <description>Post-Reset Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Post-Reset Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::post_reset_phase(uvm_phase phase);
+        super.post_reset_phase(phase);
+        ${2}
+    endtask : post_reset_phase
+]]>
+  </content>
+    <tabTrigger>rphase_post_reset</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

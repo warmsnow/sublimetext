@@ -1,0 +1,15 @@
+<snippet>
+    <description>Start of simulation Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Start of Simulation Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::start_of_simulation_phase(uvm_phase phase);
+        super.start_of_simulation_phase(phase);
+        ${2}
+    endfunction : start_of_simulation_phase
+]]>
+  </content>
+    <tabTrigger>phase_start_of_simulation</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

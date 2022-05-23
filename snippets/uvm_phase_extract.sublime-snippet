@@ -1,0 +1,15 @@
+<snippet>
+    <description>Extract Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Extract Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::extract_phase(uvm_phase phase);
+        super.extract_phase(phase);
+        ${2}
+    endfunction : extract_phase
+]]>
+  </content>
+    <tabTrigger>phase_extract</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

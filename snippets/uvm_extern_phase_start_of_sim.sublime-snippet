@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Start of simulation Phase</description>
+  <content><![CDATA[
+extern virtual function void start_of_simulation_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_start_of_simulation</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

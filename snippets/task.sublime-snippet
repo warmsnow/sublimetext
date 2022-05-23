@@ -1,0 +1,16 @@
+<snippet>
+   <name>Task</name>
+   <content><![CDATA[
+  //----------------------------------------------------------------------------
+  //  TASK        : ${0}
+  //  DESCRIPTION :
+  //  USAGE       :
+  //----------------------------------------------------------------------------
+  task ${0};
+    
+  endtask : ${0}
+
+  ]]></content>
+    <tabTrigger>task</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

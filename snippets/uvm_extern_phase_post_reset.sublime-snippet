@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Post-Reset Phase</description>
+  <content><![CDATA[
+extern virtual task post_reset_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_post_reset</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Configure Phase</description>
+  <content><![CDATA[
+extern virtual task configure_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_configure</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

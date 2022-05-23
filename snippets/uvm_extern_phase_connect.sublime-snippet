@@ -1,0 +1,9 @@
+<snippet>
+    <description>Extern Connect Phase</description>
+  <content><![CDATA[
+extern virtual function void connect_phase(uvm_phase phase);
+]]>
+  </content>
+    <tabTrigger>extern_phase_connect</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+   <description>SystemVerilog Function Doxygen</description>
+   <content><![CDATA[
+/*******************************************************************************
+* ${2}
+*******************************************************************************/
+    function void ${TM_FILENAME/(.+)\..+|.*/$1/:name}::${2}();
+        ${3}
+    endfunction : ${2}]]></content>
+    <tabTrigger>sv_function</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

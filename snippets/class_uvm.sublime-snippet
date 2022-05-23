@@ -1,0 +1,36 @@
+<snippet>
+   <name>UVM Class</name>
+   <content><![CDATA[`ifndef _SV
+`define _SV
+
+class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends ${2: /* base class*/} (
+
+//==============================================================================
+// Interface, port, fields
+//==============================================================================
+   ${0}
+
+//==============================================================================
+//  UVM Factory register
+//==============================================================================
+  // Provide implementations of virtual methods such as get_type_name and create
+   `uvm_component_utils(${1})
+
+//==============================================================================
+// External class methods
+//==============================================================================
+    extern function new(string name = "${1}");
+
+endclass : ${1}
+
+//------------------------------------------------------------------------------
+// Constructor
+//------------------------------------------------------------------------------
+    function ${1}::new(string name = "${1}");
+        super.new(name, parent);
+    endfunction : new
+
+`endif //_SV]]></content>
+    <tabTrigger>uvmclass</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

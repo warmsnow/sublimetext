@@ -1,0 +1,15 @@
+<snippet>
+    <description>End of elaboration Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* End of Elaboration Phase
+*******************************************************************************/
+    function void ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::end_of_elaboration_phase(uvm_phase phase);
+        super.end_of_elaboration_phase(phase);
+        ${2}
+    endfunction : end_of_elaboration_phase
+]]>
+  </content>
+    <tabTrigger>phase_end_of_elaboration</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>

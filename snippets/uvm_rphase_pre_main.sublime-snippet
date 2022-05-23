@@ -1,0 +1,15 @@
+<snippet>
+    <description>Pre-Main Phase</description>
+  <content><![CDATA[
+/*******************************************************************************
+* Pre-Main Phase
+*******************************************************************************/
+    task ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}::pre_main_phase(uvm_phase phase);
+        super.pre_main_phase(phase);
+        ${2}
+    endtask : pre_main_phase
+]]>
+  </content>
+    <tabTrigger>rphase_pre_main</tabTrigger>
+    <scope>source.systemverilog</scope>
+</snippet>
