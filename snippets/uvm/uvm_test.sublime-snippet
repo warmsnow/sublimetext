@@ -1,8 +1,0 @@
-<snippet>
-   <name>UVM Test</name>
-   <content><![CDATA[
-
-    ]]></content>
-    <tabTrigger>uvmtest</tabTrigger>
-    <scope>source.systemverilog</scope>
-</snippet>

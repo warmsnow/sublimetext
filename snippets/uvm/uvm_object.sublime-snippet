@@ -1,8 +1,0 @@
-<snippet>
-   <name>UVM Object</name>
-   <content><![CDATA[
-
-    ]]></content>
-    <tabTrigger>uvmobject</tabTrigger>
-    <scope>source.systemverilog</scope>
-</snippet>
